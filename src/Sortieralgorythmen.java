@@ -1,31 +1,25 @@
 
 public class Sortieralgorythmen {
-    List <Integer> insertionU;
-    List <Integer> insertionS;
-    List <Integer> selectionU;
-    List <Integer> selectionS;
+    List <Integer> unsortiert;
+    List <Integer> sortiert;
+
+    int[] num ;
     int x=0;
     public Sortieralgorythmen() {
-        insertionU=new List<>();
-        insertionS=new List<>();
-        selectionU=new List<>();
-        selectionS=new List<>();
+        sortiert=new List<>();
+        unsortiert=new List<>();
 
-        while(x>10){
-            insertionU.append((int) (Math.random()*10));
-            selectionU.append((int) (Math.random()*10));
-            x++;
+        for(int i=0; i<10;i++){
+            unsortiert.append((int) (Math.random()*10));
         }
-        insertionU.toFirst();
-        selectionU.toFirst();
-        while(insertionU.hasAccess()) {
-            insertionS.append(insertionU.getContent());
-            insertionU.next();
-            if(insertionU.getContent()> insertionS.getContent()){
-                insertionS.append(insertionU.getContent());
-            }
-            else insertionS.insert(insertionU.getContent());
-          }
+        unsortiert.toFirst();
+        System.out.println("----------------");
+        while(unsortiert.hasAccess()){
+            System.out.println(unsortiert.getContent());
+            unsortiert.next();
+        }
+        System.out.println("----------------");
+
 
     }
 
